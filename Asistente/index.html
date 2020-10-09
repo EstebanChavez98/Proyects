@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente Posada Hidalgo</title>
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        .centro {
+            margin-top: 100 px;
+        }
+    </style>
+</head>
+<!--<body>
+    
+    <h1 class="start-screen-title">Start</h1>
+    <div class="titles-grid tiles-group size-2 fg-black" data-group-title="Asistente"></div>
+
+    Metro 4 
+    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+  </body>-->
+  <body class="bg-dark fg-white h-vh-100" style="opacity: 1;" cz-shortcut-listen="true">
+
+    <div class="container-fluid h-100" style="overflow: auto;">
+        <h1 class="start-screen-title d-flex flex-justify-center">Hola, estoy aqui para ayudarte!</h1>
+        <br>
+        <div class="tiles-area d-flex flex-justify-center">
+            <div class="tiles-grid tiles-group size-2 fg-white" data-group-title="Asistente Hotel Posada Hidalgo">
+                <div onclick="Metro.dialog.open('#dialogAlimentos')" data-role="tile" class="bg-indigo fg-white tile-medium" data-role-tile="true" style="opacity: 1; transform: scale(1); transition: all 0.3s ease 0s;">
+                    <span class="mif-restaurant icon"></span>
+                    <span class="branding-bar">Menu de Alimentos</span>
+                </div>
+                <div onclick="Metro.dialog.open('#dialogBebidas')" data-role="tile" class="bg-cyan fg-white tile-medium" data-role-tile="true" style="opacity: 1; transform: scale(1); transition: all 0.3s ease 0s;">
+                    <img src="img/logoBebida.png" class="icon">
+                    <span class="branding-bar">Menu de Bebidas</span>
+                </div>
+                <a href="https://reservations.easy-rez.com/be/?token=099e55b5ef04a28cc1698bbece1ba914&ln=es" target="_blank" data-role="tile" class="bg-orange fg-white tile-wide" data-size="wide" data-role-tile="true" style="opacity: 1; transform: scale(1); transition: all 0.3s ease 0s;">
+                    <span class="mif-hotel icon"></span>
+                    <span class="branding-bar">Reservar Habitaciones</span>
+                </a>
+                <div onclick="Metro.dialog.open('#dialogSalidas')" data-role="tile" class="bg-green fg-white tile-medium" data-role-tile="true" style="opacity: 1; transform: scale(1); transition: all 0.3s ease 0s;">
+                    <span class="mif-train icon"></span>
+                    <span class="branding-bar">Salidas y Llegadas del Tren</span>
+                </div>
+                <div onclick="Metro.dialog.open('#dialogTours')" data-role="tile" class="bg-red fg-white tile-medium" data-role-tile="true" style="opacity: 1; transform: scale(1); transition: all 0.3s ease 0s;">
+                    <img src="img/logoTour.png" class="icon">
+                    <span class="branding-bar">Tours</span>
+                </div>
+                <div onclick="Metro.dialog.open('#dialogTransporte')" data-role="tile" class="bg-gray fg-white tile-wide" data-size="wide" data-role-tile="true" style="opacity: 1; transform: scale(1); transition: all 0.3s ease 0s;">
+                    <span class="mif-automobile icon"></span>
+                    <span class="branding-bar">Reservar Transportes</span>
+                </div>
+                <div onclick="Metro.dialog.open('#dialogWhatsapp')" data-role="tile" class="bg-teal fg-white tile-medium" data-role-tile="true" style="opacity: 1; transform: scale(1); transition: all 0.3s ease 0s;">
+                    <img src="img/logoWhatsapp.png" class="icon">
+                    <span class="branding-bar">Whatsapp del Hotel</span>
+                </div>
+                <div onclick="Metro.dialog.open('#dialogTelefonos')" data-role="tile" class="bg-brown fg-white tile-medium" data-role-tile="true" style="opacity: 1; transform: scale(1); transition: all 0.3s ease 0s;">
+                    <span class="mif-phone icon"></span>
+                    <span class="branding-bar">Telefonos del Hotel</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Dialog de Alimentos-->
+    <div id="dialogAlimentos" class="dialog" data-role="dialog">
+        <div class="dialog-title">Menu de Alimentos</div>
+        <div class="dialog-content">
+            Pulse en alguno los siguientes para descargar el menu de alimentos en el idioma correspondiente:
+            <br><a href="menu/menuAlimentosEsp.pdf"><b>Español</b></a>
+            <br><a href="menu/menuAlimentosEng.pdf"><b>English</b></a>
+        </div>
+        <div class="dialog-actions">
+            <button class="button primary js-dialog-close">Entendido</button>
+        </div>
+    </div>
+    <!--Dialog de Bebidas-->
+    <div id="dialogBebidas" class="dialog" data-role="dialog">
+        <div class="dialog-title">Menu de Bebidas</div>
+        <div class="dialog-content">
+            Pulse <a href="menu/menuBebidas.pdf"><b>AQUI</b></a> para descargar nuestro menu de Bebidas.
+        </div>
+        <div class="dialog-actions">
+            <button class="button primary js-dialog-close">Entendido</button>
+        </div>
+    </div>
+    <!--Dialog de Tours-->
+    <div id="dialogTours" class="dialog" data-role="dialog">
+        <div class="dialog-title">Tours</div>
+        <div class="dialog-content">
+            Pulse la imagen para ver de cerca.
+            <div class="img-container">
+                <a href="img/MenuTours.png"> <img src="img/MenuTours.png" alt=""></a>
+            </div>
+        </div>
+        <div class="dialog-actions">
+            <button class="button primary js-dialog-close">Entendido</button>
+        </div>
+    </div>
+    <!--Dialog de Salidas y Llegadas del Tren-->
+    <div id="dialogSalidas" class="dialog" data-role="dialog">
+        <div class="dialog-title">Salidas y Llegadas del Hotel</div>
+        <div class="dialog-content">
+            Llegada Tren Express Creel-El Fierte 2:45 PM Aprox.
+            <br>Salida al Tren LMM-Creel 2:30 PM
+            <br>En el Lobby del Hotel El Tren Pasa por El Fuerte 3:30 PM Aprox.
+        </div>
+        <div class="dialog-actions">
+            <button class="button primary js-dialog-close">Entendido</button>
+        </div>
+    </div>
+    <!--Dialog para el Call center de Reservar Transporte-->
+    <div id="dialogTransporte" class="dialog" data-role="dialog">
+        <div class="dialog-title">Reservar Transportes</div>
+        <div class="dialog-content">
+            Puede llamarnos directamente pulsando los numeros telefonicos para reservar transportes:
+            <br><a href="tel:6988930242"><b>(698)-893-0242</b></a>
+            <br><a href="tel:6988931194"><b>(698)-893-1194</b></a>
+        </div>
+        <div class="dialog-actions">
+            <button class="button primary js-dialog-close">Entendido</button>
+        </div>
+    </div>
+    <!--Dialog de los Telefonos del Hotel-->
+    <div id="dialogTelefonos" class="dialog" data-role="dialog">
+        <div class="dialog-title">Telefonos del Hotel</div>
+        <div class="dialog-content">
+            Puede llamar directamente pulsando en los numeros siguientes:
+            <br><a href="tel:6988930242"><b>(698)-893-0242</b></a>
+            <br><a href="tel:6988931194"><b>(698)-893-1194</b></a>
+        </div>
+        <div class="dialog-actions">
+            <button class="button primary js-dialog-close">Entendido</button>
+        </div>
+    </div>
+    <!--Dialog del Whatsapp del Hotel-->
+    <div id="dialogWhatsapp" class="dialog" data-role="dialog">
+        <div class="dialog-title">Whatsapp del Hotel</div>
+        <div class="dialog-content">
+            Puede mandar directamente mensaje pulsando en el numero siguiente:
+            <br>Numero: <a href="https://wa.me/526981143045"><b>(698)-114-3045</b></a>
+        </div>
+        <div class="dialog-actions">
+            <button class="button primary js-dialog-close">Entendido</button>
+        </div>
+    </div>
+
+    <!--<script src="../../metro/js/metro.js"></script>
+    <script src="start.js"></script>-->
+    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+
+    
+</body>
+</html>
